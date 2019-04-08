@@ -1,6 +1,0 @@
-A total of 5 preferences has been imported successfully!
-
-------------------------------------------------------
-All requested preferences have been imported.
-------------------------------------------------------
-
