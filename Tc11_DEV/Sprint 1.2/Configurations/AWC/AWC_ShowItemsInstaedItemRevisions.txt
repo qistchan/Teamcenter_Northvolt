@@ -1,0 +1,18 @@
+Modified below location addObjectUtils.js file to return Items instead of ItemRevisions
+Path:
+\TCRoot\aws2\stage\repo\kit\tc-aw-framework\src_native\assets\js
+
+Code modified:
+exports.getCreatedObjects = function(response) {
+        var cdm = app.getInjector().get("soa_kernel_clientDataModel"),
+            appCtxSvc = app.getInjector().get("appCtxService"),
+            addObjectCtx = appCtxSvc.getCtx("addObject"),
+            newObjects = [],
+            validTypes = addObjectCtx && _.isArray(addObjectCtx.validTypes) ? addObjectCtx.validTypes : [];
+        if (response.output)
+            for (var index in response.output)
+                if (response.output[index].objects) {
+                    var newObject = response.output[index].objects[0];
+                    newObjects.push(newObject)
+                } return newObjects
+    },

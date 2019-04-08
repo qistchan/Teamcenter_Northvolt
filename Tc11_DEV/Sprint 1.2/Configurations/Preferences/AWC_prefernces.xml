@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences version="10.0">
+<category name="ActiveWorkspace">
+		
+			<preference name="AWC_StartupPreferences" type="String" array="true" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>Defines the list of preferences to be retrieved at startup by the Active Workspace client from the Teamcenter server.
+Each entry in the list is a valid Teamcenter preference name.</preference_description>
+      <context name="Teamcenter">
+        <value>AWC_ColorFiltering</value>
+        <value>AWC_CustomPropValueColor</value>
+        <value>AWC_DefaultPageSize</value>
+        <value>AWC_DefaultCreateTypes</value>
+        <value>AWC_Enable_Multisite</value>
+        <value>AWC_HARD_LOAD_COUNT</value>
+        <value>AWC_RAC_OpenSupportedTypes</value>
+        <value>AWC_VIS_OpenSupportedTypes</value>
+        <value>TC_NX_Foreign_Datasets</value>
+        <value>AWC_ReqEditor</value>
+        <value>AW_Advanced_Search_Visibility</value>
+        <value>AW_SubLocation_allChangesSubLocation_ViewMode</value>
+        <value>AW_SubLocation_allQuestionsSubLocation_ViewMode</value>
+        <value>AW_SubLocation_allTasksSubLocation_ViewMode</value>
+        <value>AW_SubLocation_answeredQuestionsSubLocation_ViewMode</value>
+        <value>AW_SubLocation_approvedChangesSubLocation_ViewMode</value>
+        <value>AW_SubLocation_disApprovedChangesSubLocation_ViewMode</value>
+        <value>AW_SubLocation_favoritesSubLocation_ViewMode</value>
+        <value>AW_SubLocation_Generic_ViewMode</value>
+		 <value>AW_SubLocation_showObjectSubLocation_ViewMode</value>		
+        <value>AW_SubLocation_myRecentSubLocation_ViewMode</value>
+        <value>AW_SubLocation_myTasksSubLocation_ViewMode</value>
+        <value>AW_SubLocation_savedChangesSubLocation_ViewMode</value>
+        <value>AW_SubLocation_savedProblemReportsLocation_ViewMode</value>
+        <value>AW_SubLocation_SearchResultsSubLocation_ViewMode</value>
+        <value>AW_SubLocation_showAllReports_ViewMode</value>
+        <value>AW_SubLocation_showMyReports_ViewMode</value>
+        <value>AW_SubLocation_showReportBuilderReports_ViewMode</value>
+        <value>AW_SubLocation_submittedChangesSubLocation_ViewMode</value>
+        <value>AW_SubLocation_submittedProblemReportsLocation_ViewMode</value>
+        <value>AW_SubLocation_surrogateTasksSubLocation_ViewMode</value>
+        <value>AW_SubLocation_tasksToTrackSubLocation_ViewMode</value>
+        <value>AW_SubLocation_teamTasksSubLocation_ViewMode</value>
+        <value>AW_SubLocation_unAnsweredQuestionsSubLocation_ViewMode</value>
+        <value>Pdf_viewer_preference</value>
+        <value>DM_IsBatchPrintingEnabled</value>
+        <value>ICS_classifiable_types</value>
+        <value>AWS_Notifications_Polling_Interval</value>
+        <value>Create_WORKSPACE_OBJECT_mru_list</value>
+        <value>TC_config_rule_name</value>
+        <value>AWS_SearchPreFilter_Property1_SelectedValue</value>
+        <value>AWS_SearchPreFilter_Property2_SelectedValue</value>
+        <value>Quick_Access_Queries</value>
+        <value>Default_Quick_Access_Query</value>
+        <value>AWC_IPEM_OpenSupportedTypes</value>
+        <value>AWC_SEEC_OpenSupportedTypes</value>
+        <value>AWC_SWIM_OpenSupportedTypes</value>
+        <value>AWC_TCAA_OpenSupportedTypes</value>
+        <value>AWC_TCAI_OpenSupportedTypes</value>
+        <value>AWC_TCIC_OpenSupportedTypes</value>
+        <value>AWC_TCISC_OpenSupportedTypes</value>
+        <value>AWC_ADOBE_OpenSupportedTypes</value>
+        <value>AWC_OC_OpenSupportedTypes</value>
+        <value>AWC_IPEM_ShowObjectDatasetTypes</value>
+        <value>AWC_SEEC_ShowObjectDatasetTypes</value>
+        <value>AWC_SWIM_ShowObjectDatasetTypes</value>
+        <value>AWC_TCAA_ShowObjectDatasetTypes</value>
+        <value>AWC_TCAI_ShowObjectDatasetTypes</value>
+        <value>AWC_TCIC_ShowObjectDatasetTypes</value>
+        <value>AWC_TCISC_ShowObjectDatasetTypes</value>
+        <value>Create_WorkspaceObject_mru_max</value>
+        <value>AWS_SearchPreFilter_Property1_SelectedValue</value>
+        <value>AWS_SearchPreFilter_Property2_SelectedValue</value>
+        <value>HostConfig_2014_02_OpenSupportedTypes</value>
+        <value>WEB_default_site_server</value>
+        <value>WEB_default_site_deployed_app_name</value>
+        <value>AWC_HiddenCommands</value>
+        <value>AWS_FullTextSearch_IdxObjIndexedProperties_ObjectData</value>
+        <value>Use_DataShare_Manager</value>
+        <value>Show_Checkout_option</value>
+        <value>REQ_checkout_objects_before_export</value>
+        <value>TC_Enable_Implicit_CO</value>
+        <value>TC_force_legacy_multisite</value>
+        <value>Baseline_release_procedures</value>
+        <value>AWC_CancelEdit_Confirmation</value>
+        <value>TC_use_strict_program_project_hierarchy</value>
+        <value>Enable_DCP</value>
+        <value>AWC_Notification_Timeout</value>
+        <value>AWC_Adobe_PHXS_OpenItemRevisionOrder</value>
+        <value>AWC_Adobe_IDSN_OpenItemRevisionOrder</value>
+        <value>AWC_Adobe_ILST_OpenItemRevisionOrder</value>
+        <value>AWC_DeclarativeMode</value>
+        <value>TraceReport_Default_TraceLink_Type</value>
+        <value>Tracelink_Edit_enabled</value>
+        <value>WRKFLW_Hide_Perform_Task_Command_ToolAndInfo</value>
+        <value>AWC_Search_DisplayODSContent</value>
+        <value>AWC_select_firstobject_onSearch</value>
+        <value>AW_Highlighting</value>
+        <value>WRKFLW_hide_subsequent_task_errors</value>
+        <value>REQ_suspicion_mgmt</value>
+        <value>AWC_search_show_all_filters</value>
+        <value>WRKFLW_allow_quorum_override</value>
+        <value>WRKFLW_allow_wait_for_undecided_override</value>
+        <value>WRKFLW_user_panel_content_display</value>
+        <value>AW_Search_Results_Export_Max_Rows</value>
+        <value>TC_allow_remove_owning_project</value>
+        <value>AWC_Project_showOwningProgramTab</value>
+        <value>AWBBackgroundContextAutoSaveFrequency</value>
+        <value>TC_Fnd0Booleansolve_EffectivityDateRangeFromTo</value>
+        <value>TC_Fnd0Booleansolve_EffectivityIntegerRangeFromTo</value>
+        <value>AW_SubLocation_OccurrenceManagementSubLocation_ViewMode</value>
+        <value>AWC_MaxNumberOfSelectionsToProcess</value>
+        <value>RV1_DARB_Expand_Incoming_Levels</value>
+        <value>RV1_DARB_Expand_Outgoing_Levels</value>
+        <value>RV1_DARB_Filter_Properties</value>
+        <value>RV1_DARB_Concentrated</value>
+        <value>RV1_DARB_Expand_All_1_Level_Command_Visible</value>
+        <value>RV1_DARB_Expand_Selected_1_Level_Command_Visible</value>
+        <value>RV1_DARB_Sorted_Layouts</value>
+        <value>RV1_DARB_Hide_Unhide_List_Order_Incoming_First</value>
+        <value>CM_enable_global_change_context</value>
+        <value>S2cl_EnableTagSuggestions</value>
+        <value>Dma1CreateDocOnDrop</value>
+        <value>Dma1UseCOTSIRDC</value>
+        <value>CR_allow_alternate_procedures</value>
+        <value>WRKFLW_allow_resourcepool_assignments</value>
+        <value>WRKFLW_show_user_assignment_options</value>
+        <value>WRKFLW_use_legacy_template_filter</value>
+      </context>
+    </preference>
+	<preference name="AW_SubLocation_Generic_ViewMode" type="String" array="true" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+		<value>TreeSummaryView</value>
+      </context>
+    </preference>
+    <preference name="AW_SubLocation_OccurrenceManagementSubLocation_ViewMode" type="String" array="true" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+		<value>TreeSummaryView</value>
+      </context>
+    </preference>
+	<preference name="AW_SubLocation_showObjectSubLocation_ViewMode" type="String" array="true" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+		<value>TreeSummaryView</value>
+      </context>
+    </preference>
+	
+		<preference name="AWC_DefaultCreateTypes" type="String" array="true" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>Define the types to be displayed in the &quot;Create&quot; dialog in the Active Workspace Client (AWC).
+Valid values are types internal names.
+All subtypes associated to a provided type will also be displayed.</preference_description>
+      <context name="Teamcenter">
+        <value>Folder</value>
+        <value>NV4_NVDocument</value>
+        <value>NV4_NVMCAD</value>
+        <value>NV4_Unit</value>
+        <value>NV4_Module</value>
+        <value>NV4_Device</value>
+        <value>NV4_Area</value>
+        <value>NV4_ProcessCell</value>
+        <value>NV4_Site</value>
+		<value>NV4_Factory_Conn</value>
+		<value>NV4_Building</value>
+		<value>NV4_Discipline</value>
+      </context>
+    </preference>
+	 <preference name="AWC_TypeSelectorExclusionTypeList" type="String" array="true" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>Defines the list of object types to be excluded when retrieving subtypes in Active Workspace client from the Teamcenter server.
+Valid values are Business Object internal names.</preference_description>
+      <context name="Teamcenter">
+        <value>ADA_License</value>
+        <value>Allocation</value>
+        <value>AllocationMap</value>
+        <value>AppearanceGroup</value>
+        <value>Architecture</value>
+        <value>AssemblyArrangement</value>
+        <value>Authorization</value>
+        <value>BillRate</value>
+        <value>CAEBCItem</value>
+        <value>CAEConnItem</value>
+        <value>StructureMap</value>
+        <value>StructureMap Master</value>
+        <value>StructureMapRevision Master</value>
+        <value>CAELoadItem</value>
+        <value>DCt_GraphicPriority</value>
+        <value>DesignReq</value>
+        <value>DLF Attribute Form</value>
+        <value>EPMJob</value>
+        <value>EPMTask</value>
+        <value>Exclude_License</value>
+        <value>Fnd0AbstractPersistentProxy</value>
+        <value>Fnd0ProxyTask</value>
+        <value>FullText</value>
+        <value>GPA</value>
+        <value>Graphic</value>
+        <value>GraphicMaster</value>
+        <value>GraphicOption</value>
+        <value>GraphicOptionMaster</value>
+        <value>GraphicOptionRevisionMaster</value>
+        <value>GraphicRevisionMaster</value>
+        <value>Identifier</value>
+        <value>IP_License</value>
+        <value>ITAR_License</value>
+        <value>ItemRevision</value>
+        <value>JTContentForm</value>
+        <value>MEActivity</value>
+        <value>MEContext</value>
+        <value>MEOP</value>
+        <value>MEProcess</value>
+        <value>MEWorkarea</value>
+        <value>PSBOMView</value>
+        <value>PSBOMViewRevision</value>
+        <value>Reservation</value>
+        <value>RouteLocation</value>
+        <value>RoutePath</value>
+        <value>SavedSearch</value>
+        <value>Schedule</value>
+        <value>ScheduleTask</value>
+        <value>SchDeliverable</value>
+        <value>ScheduleMember</value>
+        <value>ScheduleTaskRevision Execution</value>
+        <value>ScheduleTaskRevision Scheduling</value>
+        <value>SchMgtCostForm</value>
+        <value>SchTaskDeliverable</value>
+        <value>Snapshot</value>
+        <value>SnapShotForm</value>
+        <value>TaskInbox</value>
+        <value>Tool</value>
+        <value>TraceLink</value>
+        <value>TransferOptionSet</value>
+        <value>TranslationOrder</value>
+        <value>TranslationOrderMaster</value>
+        <value>TranslationOrderRevisionMaster</value>
+        <value>TranslatnDelvry</value>
+        <value>TranslatnDelvryMaster</value>
+        <value>TranslatnDelvryRevisionMaster</value>
+        <value>TransltnOffice</value>
+        <value>TransltnOfficeMaster</value>
+        <value>TransltnOfficeRevisionMaster</value>
+        <value>User_Inbox</value>
+        <value>ValData</value>
+        <value>ValidationAgent</value>
+        <value>ValidationReq</value>
+        <value>AsMaintainedRevisionRule</value>
+        <value>AssetGroup</value>
+        <value>BidPackage</value>
+        <value>CalParm</value>
+        <value>Cba0LOAProxy</value>
+        <value>Cba0LOUProxy</value>
+        <value>Cba0PartProxy</value>
+        <value>Cba0PersistentProxy</value>
+        <value>Ccd0MemoryLayout</value>
+        <value>Ccd0OverrideCont</value>
+        <value>Civ0COM4Master</value>
+        <value>Civ0COM4RevisionMaster</value>
+        <value>Civ0DDN4Master</value>
+        <value>Civ0DDN4RevisionMaster</value>
+        <value>Civ0DM4Master</value>
+        <value>Civ0DM4RevisionMaster</value>
+        <value>Civ0DML4Master</value>
+        <value>Civ0DML4RevisionMaster</value>
+        <value>Civ0PM4Master</value>
+        <value>Civ0PM4RevisionMaster</value>
+        <value>Crt0Study</value>
+        <value>DCt_GrphcTrnsltnMaster</value>
+        <value>DCt_GrphcTrnsltnRevisionMaster</value>
+        <value>DCt_Item</value>
+        <value>DCt_ItemMaster</value>
+        <value>DCt_ItemRevisionMaster</value>
+        <value>DCt_Language</value>
+        <value>DCt_PublishOrderMaster</value>
+        <value>DCt_PublishOrderRevisionMaster</value>
+        <value>DCt_TopicTypeGrp</value>
+        <value>DCt_TranslationMaster</value>
+        <value>DCt_TranslationRevisionMaster</value>
+        <value>DCt_Workspace</value>
+        <value>DC_Admin</value>
+        <value>DC_ComposedDoc</value>
+        <value>DC_ComposedDocMaster</value>
+        <value>DC_ComposedDocRevisionMaster</value>
+        <value>DC_DitaAbsMapMaster</value>
+        <value>DC_DitaAbsMapRevisionMaster</value>
+        <value>DC_DitaAbsTopicMaster</value>
+        <value>DC_DitaAbsTopicRevisionMaster</value>
+        <value>DC_DitaBaseMaster</value>
+        <value>DC_DitaBaseRevisionMaster</value>
+        <value>DC_DitaConceptMaster</value>
+        <value>DC_DitaConceptRevisionMaster</value>
+        <value>DC_DitaDynMapMaster</value>
+        <value>DC_DitaDynMapRevisionMaster</value>
+        <value>DC_DitaEditMapMaster</value>
+        <value>DC_DitaEditMapRevisionMaster</value>
+        <value>DC_DitaItemMaster</value>
+        <value>DC_DitaItemRevisionMaster</value>
+        <value>DC_DitaReferenceMaster</value>
+        <value>DC_DitaReferenceRevisionMaster</value>
+        <value>DC_DitaTaskMaster</value>
+        <value>DC_DitaTaskRevisionMaster</value>
+        <value>DC_DitaTopicMaster</value>
+        <value>DC_DitaTopicRevisionMaster</value>
+        <value>DC_ExtEntAdmin</value>
+        <value>DC_ExtEntAdminMaster</value>
+        <value>DC_ExtEntAdminRevisionMaster</value>
+        <value>DC_Procedure</value>
+        <value>DC_ProcedureMaster</value>
+        <value>DC_ProcedureRevisionMaster</value>
+        <value>DC_Publication</value>
+        <value>DC_PublicationMaster</value>
+        <value>DC_PublicationRevisionMaster</value>
+        <value>DC_ReviewerDoc</value>
+        <value>DC_ReviewerDocMaster</value>
+        <value>DC_ReviewerDocRevisionMaster</value>
+        <value>DC_SchemaMaster</value>
+        <value>DC_SchemaRevisionMaster</value>
+        <value>DC_SkdCOMMaster</value>
+        <value>DC_SkdCOMRevisionMaster</value>
+        <value>DC_SkdDDNMaster</value>
+        <value>DC_SkdDDNRevisionMaster</value>
+        <value>DC_SkdDMLMaster</value>
+        <value>DC_SkdDMLRevisionMaster</value>
+        <value>DC_SkdDMMaster</value>
+        <value>DC_SkdDMRevisionMaster</value>
+        <value>DC_SkdGraphIMaster</value>
+        <value>DC_SkdGraphIRevisionMaster</value>
+        <value>DC_SkdIPRFMaster</value>
+        <value>DC_SkdIPRFRevisionMaster</value>
+        <value>DC_SkdPMMaster</value>
+        <value>DC_SkdPMRevisionMaster</value>
+        <value>DC_StyleSheetMaster</value>
+        <value>DC_StyleSheetRevisionMaster</value>
+        <value>DC_Topic</value>
+        <value>DC_TopicMaster</value>
+        <value>DC_TopicRevisionMaster</value>
+        <value>DC_UnparsedDoc</value>
+        <value>DC_UnparsedDocMaster</value>
+        <value>DC_UnparsedDocRevisionMaster</value>
+        <value>DC_XmlSchemaMaster</value>
+        <value>DC_XmlSchemaRevisionMaster</value>
+        <value>FaultCode</value>
+        <value>LifeCharDefinition</value>
+        <value>LogBook</value>
+        <value>LogEntry</value>
+        <value>Lot</value>
+        <value>Mem0MemoryLayout</value>
+        <value>Mes0MEBooleanDCDForm</value>
+        <value>Mes0MEBooleanPFForm</value>
+        <value>Mes0MEBuyoffDCDForm</value>
+        <value>Mes0MEDCD</value>
+        <value>Mes0MEDCDBaseForm</value>
+        <value>Mes0MEDurationDCDFrm</value>
+        <value>Mes0MEEndTimeDCDForm</value>
+        <value>Mes0MEIntegerDCDForm</value>
+        <value>Mes0MEIntegerPFForm</value>
+        <value>Mes0MELOVDCDForm</value>
+        <value>Mes0MELOVPFBaseForm</value>
+        <value>Mes0MEPF</value>
+        <value>Mes0MEPFBaseForm</value>
+        <value>Mes0MERealDCDForm</value>
+        <value>Mes0MERealPFForm</value>
+        <value>Mes0MEStringDCDForm</value>
+        <value>Mes0MEStringPFForm</value>
+        <value>Mes0MESTXElement</value>
+        <value>Mes0MESTXElementMaster</value>
+        <value>Mes0MESTXElementRevision</value>
+        <value>Mes0MESTXElementRevisionMaster</value>
+        <value>Mes0MESTXFolder</value>
+        <value>Mes0MESTXFolderMaster</value>
+        <value>Mes0MESTXFolderRevision</value>
+        <value>Mes0MESTXFolderRevisionMaster</value>
+        <value>Mes0MESTXLibrary</value>
+        <value>Mes0MESTXLibraryMaster</value>
+        <value>Mes0MESTXLibraryRevision</value>
+        <value>Mes0MESTXLibraryRevisionMaster</value>
+        <value>Mes0METimeDCDForm</value>
+        <value>Mes0METimePFForm</value>
+        <value>Mes0MEWIObjTemplMaster</value>
+        <value>Mes0MEWIObjTemplRevisionMaster</value>
+        <value>Mes0MEWIPreview</value>
+        <value>Mes0MEWITemplateMaster</value>
+        <value>Mes0MEWITemplateRevisionMaster</value>
+        <value>ObsCharDefinition</value>
+        <value>ParmDef</value>
+        <value>ParmDef</value>
+        <value>ParmGrpVal</value>
+        <value>PartMovement</value>
+        <value>PhysicalPart</value>
+        <value>ProductVariant</value>
+        <value>ProductVariantIntent</value>
+        <value>SCMCompoundElement</value>
+        <value>SCMElement</value>
+        <value>SCMServer</value>
+        <value>SCMVersionObject</value>
+        <value>SerialNumberGenerator</value>
+        <value>SignoffList</value>
+        <value>SRP0GnSrvRequest</value>
+        <value>SRP0GnSrvRequestMaster</value>
+        <value>SRP0GnSrvRequestRevision</value>
+        <value>SRP0GnSrvRequestRevisionMaster</value>
+        <value>SRP0ServiceCatalog</value>
+        <value>SRP0ServiceOffering</value>
+        <value>ChangeItem</value>
+		<value>Fnd0ValidationHome</value>
+		<value>Fnd0HomeFolder</value>
+		<value>Envelope</value>
+		<value>Newstuff Folder</value>
+		<value>Mail Folder</value>
+		<value>StdFolder</value>
+		<value>NX0BookletFolder</value>
+      </context>
+    </preference>
+		<preference name="AWC_NV4_NVDocument.CREATERENDERING" type="String" array="false" disabled="false" protectionScope="User" envEnabled="false">
+			<preference_description>Stylesheet for NV Document</preference_description>
+		<context name="Teamcenter">
+			<value>AWC_NV4_NVDocumentCreate</value>
+		</context>
+		</preference>
+		 <preference name="NV4_NVMCADRevision.SUMMARYRENDERING" type="String" array="true" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>Awb0NVMCADRevSummaryForShowObjectLocation</value>
+      </context>
+    </preference>
+	  <preference name="AWC_NV4_NVDocumentRevision.SUMMARYRENDERING" type="String" array="false" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Pointing to stylesheet for nv document.</preference_description>
+      <context name="Teamcenter">
+        <value>Awp0NVDocumentRevSummary</value>
+      </context>
+    </preference>
+	<preference name="AWC_NVDesignRevision.showObjectLocation.SUMMARYRENDERING" type="String" array="false" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Stylesheet for NV MCAD revision</preference_description>
+      <context name="Teamcenter">
+        <value>Awb0NVMCADRevSummaryForShowObjectLocation</value>
+      </context>
+    </preference>
+	<preference name="Awb0NVMCADRevSummaryForShowObjectLocation.SUMMARY_REGISTEREDTO" type="String" array="true" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>NV4_NVMCADRevision</value>
+      </context>
+    </preference>
+	 <preference name="Awb0NVBuildingRevSummaryForShowObjectLocation.SUMMARY_REGISTEREDTO" type="String" array="true" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>NV4_BuildingRevision</value>
+      </context>
+    </preference>
+	<preference name="NV4_BuildingRevision.SUMMARYRENDERING" type="String" array="true" disabled="false" protectionScope="Site" envEnabled="false">
+
+     	 <preference_description>This is an internal preference.</preference_description>
+
+	      <context name="Teamcenter">
+
+    		    <value>Awb0NVBuildingRevSummaryForShowObjectLocation</value>
+
+	      </context>	
+
+        </preference>
+<preference name="Awb0NVDisciplinRevSummaryForShowObjectLocation.SUMMARY_REGISTEREDTO" type="String" array="true" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>NV4_DisciplineRevision</value>
+      </context>
+    </preference>
+		<preference name="NV4_DisciplineRevision.SUMMARYRENDERING" type="String" array="true" disabled="false" protectionScope="Site" envEnabled="false">
+
+     	 <preference_description>This is an internal preference.</preference_description>
+
+	      <context name="Teamcenter">
+
+    		    <value>Awb0NVDisciplinRevSummaryForShowObjectLocation</value>
+
+	      </context>	
+
+        </preference>
+	<preference name="AWC_NV4_UnitRevision.SUMMARYRENDERING" type="String" array="false" disabled="false" protectionScope="Site" envEnabled="false">
+		  <preference_description>This is an internal preference.</preference_description>
+		  <context name="Teamcenter">
+			<value>AWC_NV4_UnitRevisionSummary</value>
+		  </context>
+	</preference>
+	<preference name="AWC_NV4_UnitRevision.SAVEASRENDERING" type="String" array="false" disabled="false" protectionScope="Site" envEnabled="false">
+		  <preference_description>This is an internal preference.</preference_description>
+		  <context name="Teamcenter">
+			<value>AWC_NV4_UnitRevisionSaveAs</value>
+		  </context>
+	</preference>
+	<preference name="AWC_NV4_Unit.SAVEASRENDERING" type="String" array="false" disabled="false" protectionScope="Site" envEnabled="false">
+		  <preference_description>This is an internal preference.</preference_description>
+		  <context name="Teamcenter">
+			<value>AWC_NV4_UnitSaveAs</value>
+		  </context>
+	</preference>
+	 <preference name="AWC_NV4_UnitRevision.showObjectLocation.OccurrenceManagementSubLocation.SUMMARYRENDERING" type="String" array="false" disabled="false" protectionScope="Site" envEnabled="true">
+		  <preference_description>UnitRevision Summary</preference_description>
+		  <context name="Teamcenter">
+			<value>AWC_NV4_UnitRevisionSummary</value>
+		  </context>
+	   </preference>
+	   <preference name="AWC_NV4_UnitRevision.showObjectLocation.com.siemens.splm.clientfx.tcui.xrt.objectNavigationSubLocation.SUMMARYRENDERING" type="String" array="false" disabled="false" protectionScope="Site" envEnabled="true">
+		  <preference_description>UnitRevision Summary</preference_description>
+		  <context name="Teamcenter">
+			<value>AWC_NV4_UnitRevisionSummary</value>
+		  </context>
+	   </preference>
+	   <preference name="AWC_NV4_UnitRevision.showObjectLocation.objectNavigationSubLocation.SUMMARYRENDERING" type="String" array="false" disabled="false" protectionScope="Site" envEnabled="true">
+		  <preference_description>UnitRevision Summary</preference_description>
+		  <context name="Teamcenter">
+			<value>AWC_NV4_UnitRevisionSummary</value>
+		  </context>
+	   </preference>
+	<preference name="AWC_NV4_ModuleRevision.SUMMARYRENDERING" type="String" array="false" disabled="false" protectionScope="Site" envEnabled="false">
+		  <preference_description>This is an internal preference.</preference_description>
+		  <context name="Teamcenter">
+			<value>AWC_NV4_ModuleRevisionSummary</value>
+		  </context>
+	</preference>
+	<preference name="AWC_NV4_ModuleRevision.SAVEASRENDERING" type="String" array="false" disabled="false" protectionScope="Site" envEnabled="false">
+		  <preference_description>This is an internal preference.</preference_description>
+		  <context name="Teamcenter">
+			<value>AWC_NV4_ModuleRevisionSaveAs</value>
+		  </context>
+	</preference>
+	
+	 <preference name="AWC_NV4_ModuleRevision.showObjectLocation.OccurrenceManagementSubLocation.SUMMARYRENDERING" type="String" array="false" disabled="false" protectionScope="Site" envEnabled="true">
+		  <preference_description>UnitRevision Summary</preference_description>
+		  <context name="Teamcenter">
+			<value>AWC_NV4_ModuleRevisionSummary</value>
+		  </context>
+	   </preference>
+	   <preference name="AWC_NV4_ModuleRevision.showObjectLocation.com.siemens.splm.clientfx.tcui.xrt.objectNavigationSubLocation.SUMMARYRENDERING" type="String" array="false" disabled="false" protectionScope="Site" envEnabled="true">
+		  <preference_description>UnitRevision Summary</preference_description>
+		  <context name="Teamcenter">
+			<value>AWC_NV4_ModuleRevisionSummary</value>
+		  </context>
+	   </preference>
+	   <preference name="AWC_NV4_ModuleRevision.showObjectLocation.objectNavigationSubLocation.SUMMARYRENDERING" type="String" array="false" disabled="false" protectionScope="Site" envEnabled="true">
+		  <preference_description>UnitRevision Summary</preference_description>
+		  <context name="Teamcenter">
+			<value>AWC_NV4_ModuleRevisionSummary</value>
+		  </context>
+	   </preference>	
+	   <preference name="AWC_NV4_DeviceRevision.SUMMARYRENDERING" type="String" array="false" disabled="false" protectionScope="Site" envEnabled="false">
+		  <preference_description>This is an internal preference.</preference_description>
+		  <context name="Teamcenter">
+			<value>AWC_NV4_DeviceRevisionSummary</value>
+		  </context>
+	</preference>
+	<preference name="AWC_NV4_DeviceRevision.SAVEASRENDERING" type="String" array="false" disabled="false" protectionScope="Site" envEnabled="false">
+		  <preference_description>This is an internal preference.</preference_description>
+		  <context name="Teamcenter">
+			<value>AWC_NV4_DeviceRevisionSaveAs</value>
+		  </context>
+	</preference>
+	
+	 <preference name="AWC_NV4_DeviceRevision.showObjectLocation.OccurrenceManagementSubLocation.SUMMARYRENDERING" type="String" array="false" disabled="false" protectionScope="Site" envEnabled="true">
+		  <preference_description>DeviceRevision Summary</preference_description>
+		  <context name="Teamcenter">
+			<value>AWC_NV4_DeviceRevisionSummary</value>
+		  </context>
+	   </preference>
+	   <preference name="AWC_NV4_DeviceRevision.showObjectLocation.com.siemens.splm.clientfx.tcui.xrt.objectNavigationSubLocation.SUMMARYRENDERING" type="String" array="false" disabled="false" protectionScope="Site" envEnabled="true">
+		  <preference_description>DeviceRevision Summary</preference_description>
+		  <context name="Teamcenter">
+			<value>AWC_NV4_DeviceRevisionSummary</value>
+		  </context>
+	   </preference>
+	   <preference name="AWC_NV4_DeviceRevision.showObjectLocation.objectNavigationSubLocation.SUMMARYRENDERING" type="String" array="false" disabled="false" protectionScope="Site" envEnabled="true">
+		  <preference_description>UnitRevision Summary</preference_description>
+		  <context name="Teamcenter">
+			<value>AWC_NV4_DeviceRevisionSummary</value>
+		  </context>
+	   </preference>	
+	   <preference name="AWC_NV4_Factory_ConnRevision.SUMMARYRENDERING" type="String" array="false" disabled="false" protectionScope="Site" envEnabled="false">
+		  <preference_description>This is an internal preference.</preference_description>
+		  <context name="Teamcenter">
+			<value>AWC_NV4_Factory_ConnRevisionSummary</value>
+		  </context>
+	</preference>
+	<preference name="AWC_NV4_Factory_ConnRevision.SAVEASRENDERING" type="String" array="false" disabled="false" protectionScope="Site" envEnabled="false">
+		  <preference_description>This is an internal preference.</preference_description>
+		  <context name="Teamcenter">
+			<value>AWC_NV4_Factory_ConnRevisionSaveAs</value>
+		  </context>
+	</preference>
+	
+	 <preference name="AWC_NV4_Factory_ConnRevision.showObjectLocation.OccurrenceManagementSubLocation.SUMMARYRENDERING" type="String" array="false" disabled="false" protectionScope="Site" envEnabled="true">
+		  <preference_description>DeviceRevision Summary</preference_description>
+		  <context name="Teamcenter">
+			<value>AWC_NV4_Factory_ConnRevisionSummary</value>
+		  </context>
+	   </preference>
+	   <preference name="AWC_NV4_Factory_ConnRevision.showObjectLocation.com.siemens.splm.clientfx.tcui.xrt.objectNavigationSubLocation.SUMMARYRENDERING" type="String" array="false" disabled="false" protectionScope="Site" envEnabled="true">
+		  <preference_description>DeviceRevision Summary</preference_description>
+		  <context name="Teamcenter">
+			<value>AWC_NV4_Factory_ConnRevisionSummary</value>
+		  </context>
+	   </preference>
+	   <preference name="AWC_NV4_Factory_ConnRevision.showObjectLocation.objectNavigationSubLocation.SUMMARYRENDERING" type="String" array="false" disabled="false" protectionScope="Site" envEnabled="true">
+		  <preference_description>UnitRevision Summary</preference_description>
+		  <context name="Teamcenter">
+			<value>AWC_NV4_Factory_ConnRevisionSummary</value>
+		  </context>
+	   </preference>
+		<preference name="AWC_NV4_Awb0DesignElement.SUMMARYRENDERING" type="String" array="false" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Registration of summary stylesheet for Awb0Element objects.</preference_description>
+      <context name="Teamcenter">
+        <value>AWC_NV4_Awb0DesignElementSummary</value>
+      </context>
+    </preference>	   
+	<preference name="AWC_NV4_NVMCAD.CREATERENDERING" type="String" array="false" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Nv Product create for AWC</preference_description>
+      <context name="Teamcenter">
+        <value>AWC_NV4_NVMCADCreate</value>
+      </context>
+    </preference>
+	
+	<preference name="AWC_NV4_Device.CREATERENDERING" type="String" array="false" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>create sytlesheet  of device for AWC</preference_description>
+      <context name="Teamcenter">
+        <value>AWC_NV4_DeviceCreate</value>
+      </context>
+    </preference>
+    <preference name="AWC_NV4_Factory_Conn.CREATERENDERING" type="String" array="false" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Factory Connection create sytlesheet</preference_description>
+      <context name="Teamcenter">
+        <value>AWC_NV4_Factory_ConnCreate</value>
+      </context>
+    </preference>
+    <preference name="AWC_NV4_Module.CREATERENDERING" type="String" array="false" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Create Module</preference_description>
+      <context name="Teamcenter">
+        <value>AWC_NV4_ModuleCreate</value>
+      </context>
+    </preference>
+    <preference name="AWC_NV4_Unit.CREATERENDERING" type="String" array="false" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Create Unit</preference_description>
+      <context name="Teamcenter">
+        <value>AWC_NV4_UnitCreate</value>
+      </context>
+	</preference>
+	  <preference name="AWC_Signoff.SUMMARYRENDERING" type="String" array="false" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Registration of summary stylesheet for Signoff objects</preference_description>
+      <context name="Teamcenter">
+        <value>AWC_NV4_EPMSignoffSummary</value>
+      </context>
+    </preference>
+	   
+</category>
+</preferences>

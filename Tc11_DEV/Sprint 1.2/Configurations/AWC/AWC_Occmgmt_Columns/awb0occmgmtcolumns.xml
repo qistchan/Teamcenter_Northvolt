@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Import>
+
+  <Client abbreviation="AWClient" name="AWClient">
+    <ClientScope hostingClientName="" name="Content" uri="Awb0OccurrenceManagement">
+      <ColumnConfig columnConfigId="contentColConfig" sortBy="20" sortDirection="Ascending">
+        <ColumnDef columnName="awb0DisplayedName" objectType="Awb0Element" propertyName="awb0DisplayedName" width="400"/>
+        <ColumnDef columnName="object_name" objectType="Awb0SavedBookmark" propertyName="object_name" width="400"/>
+        <ColumnDef columnName="awb0ArchetypeId" objectType="Awb0ConditionalElement" propertyName="awb0ArchetypeId" width="100"/>
+        <ColumnDef columnName="awb0ArchetypeRevId" objectType="Awb0ConditionalElement" propertyName="awb0ArchetypeRevId" width="100"/>
+        <ColumnDef columnName="awb0ArchetypeRevName" objectType="Awb0ConditionalElement" propertyName="awb0ArchetypeRevName" width="300"/>
+        <ColumnDef columnName="awb0ArchetypeRevDescription" objectType="Awb0ConditionalElement" propertyName="awb0ArchetypeRevDescription" width="300"/>
+        <ColumnDef columnName="object_desc" objectType="Awb0SavedBookmark" propertyName="object_desc" width="100"/>
+        <ColumnDef columnName="awb0LogicalDesignator" objectType="Awb0PositionedElement" propertyName="awb0LogicalDesignator" width="100"/>
+        <ColumnDef columnName="awb0Sequence" objectType="Awb0Element" propertyName="awb0Sequence" width="100"/>
+		<ColumnDef columnName="nv4_awb0_export_erp" objectType="NV4_Awb0DesignElement" propertyName="nv4_awb0_export_erp" width="100"/>
+        <ColumnDef columnName="awb0Quantity" objectType="Awb0Element" propertyName="awb0Quantity" width="100"/>
+        <ColumnDef columnName="awb0UoM" objectType="Awb0Element" propertyName="awb0UoM" width="100"/>
+        <ColumnDef columnName="awb0ArchetypeRevRelStatus" objectType="Awb0ConditionalElement" propertyName="awb0ArchetypeRevRelStatus" width="100"/>
+        <ColumnDef columnName="awb0ArchetypeRevReleaseDate" objectType="Awb0ConditionalElement" propertyName="awb0ArchetypeRevReleaseDate" width="100"/>
+        <ColumnDef columnName="awb0ArchetypeRevEffText" objectType="Awb0ConditionalElement" propertyName="awb0ArchetypeRevEffText" width="300"/>
+        <ColumnDef columnName="awb0ArchetypeRevOwningUser" objectType="Awb0ConditionalElement" propertyName="awb0ArchetypeRevOwningUser" width="100"/>
+        <ColumnDef columnName="awb0ArchetypeRevOwningGroup" objectType="Awb0ConditionalElement" propertyName="awb0ArchetypeRevOwningGroup" width="100"/>
+        <ColumnDef columnName="awb0ArchetypeRevLastModUser" objectType="Awb0ConditionalElement" propertyName="awb0ArchetypeRevLastModUser" width="100"/>
+        <ColumnDef columnName="awb0Parent" objectType="Awb0Element" propertyName="awb0Parent" width="100"/>
+        <ColumnDef columnName="awb0IsPrecise" objectType="Awb0ConditionalElement" propertyName="awb0IsPrecise" width="100"/>
+        <ColumnDef columnName="awb0HasReflection" objectType="Awb0PositionedElement" propertyName="awb0HasReflection" width="100"/>
+      </ColumnConfig>
+    </ClientScope>
+  </Client>
+
+</Import>
