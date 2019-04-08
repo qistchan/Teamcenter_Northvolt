@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+// @<COPYRIGHT>@
+// ==================================================
+// Copyright 2014.
+// Siemens Product Lifecycle Management Software Inc.
+// All Rights Reserved.
+// ==================================================
+// @<COPYRIGHT>@
+-->
+<!-- Default style sheet for displaying a workflow Review task. -->
+<rendering xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="XMLRenderingStylesheet_Schema.xsd">
+    <header>
+        <image source="type"/>
+        <property name="object_name"/>
+        <property name="object_type" modifiable="false"/>
+    </header>
+    <page titleKey="tc_xrt_Overview">
+        <column width="25%">
+            <section titleKey="tc_xrt_Action">
+                <htmlPanel declarativeKey="Awp0PerformTask"/>
+            </section>
+            <section titleKey="tc_xrt_properties">
+                <property name="fnd0Assignee"/>
+                <property name="fnd0AssigneeGroupRole" modifiable="false"/>
+                <property name="active_surrogate" modifiable="false"/>
+                <property name="due_date"/>
+                <property name="fnd0TaskExecutionErrors"/>
+                <property name="fnd0RootScheduleTask" renderingHint="objectlink" modifiable="false"/>
+            </section>
+		</column>
+		<column width="25%">
+            <section titleKey="web_inbox_targets">
+                <objectSet source="root_target_attachments.ItemRevision" defaultdisplay="listDisplay" sortby="object_string" sortdirection="ascending">
+                    <tableDisplay>
+                        <property name="object_string"/>
+                        <property name="object_type"/>
+                        <property name="release_status_list"/>
+                    </tableDisplay>
+                    <thumbnailDisplay/>
+                    <listDisplay/>
+                    <command actionKey="newBusinessObjectContextualAction" commandId="com.teamcenter.rac.common.AddNew" renderingHint="commandbutton"/>
+                    <command actionKey="pasteAction" commandId="com.teamcenter.rac.viewer.pastewithContext" renderingHint="commandbutton"/>
+                    <command actionKey="cutAction" commandId="org.eclipse.ui.edit.cut" renderingHint="commandbutton">
+                    <parameter name="localSelection" value="true"/>
+                    </command>
+                </objectSet>
+				
+				
+            </section>
+        </column>
+        <column width="25%">
+            <section titleKey="tc_xrt_Preview">
+                <inject type="dataset" src="Awp0CrossSelectionViewer" module="js/aw-include.directive"/>
+            </section>
+        </column>
+    </page>
+    <page titleKey="tc_xrt_attachments">
+        <section titleKey="tc_xrt_AllTargets">
+            <objectSet source="root_target_attachments.WorkspaceObject" defaultdisplay="tableDisplay" sortby="object_string" sortdirection="ascending">
+                <tableDisplay>
+                    <property name="object_string"/>
+                    <property name="object_type"/>
+                    <property name="last_mod_date"/>
+                    <property name="release_status_list"/>
+                    <property name="owning_user"/>
+                </tableDisplay>
+                <thumbnailDisplay/>
+                <listDisplay/>
+                <command actionKey="newBusinessObjectContextualAction" commandId="com.teamcenter.rac.common.AddNew" renderingHint="commandbutton"/>
+                <command actionKey="pasteAction" commandId="com.teamcenter.rac.viewer.pastewithContext" renderingHint="commandbutton"/>
+                <command actionKey="cutAction" commandId="org.eclipse.ui.edit.cut" renderingHint="commandbutton">
+                    <parameter name="localSelection" value="true"/>
+                </command>
+            </objectSet>
+        </section>
+        <section titleKey="tc_xrt_AllReferences">
+            <objectSet source="root_reference_attachments.WorkspaceObject" defaultdisplay="tableDisplay" sortby="object_string" sortdirection="ascending">
+                <tableDisplay>
+                    <property name="object_string"/>
+                    <property name="object_type"/>
+                    <property name="last_mod_date"/>
+                    <property name="release_status_list"/>
+                    <property name="owning_user"/>
+                </tableDisplay>
+                <thumbnailDisplay/>
+                <listDisplay/>
+                <command actionKey="newBusinessObjectContextualAction" commandId="com.teamcenter.rac.common.AddNew" renderingHint="commandbutton"/>
+                <command actionKey="pasteAction" commandId="com.teamcenter.rac.viewer.pastewithContext" renderingHint="commandbutton"/>
+                <command actionKey="cutAction" commandId="org.eclipse.ui.edit.cut" renderingHint="commandbutton">
+                    <parameter name="localSelection" value="true"/>
+                </command>
+            </objectSet>
+        </section>
+    </page>
+    <inject type="dataset" src="EPMObjectsWorkflowSummary" />
+    <inject type="dataset" src="Awp0EPMTaskParticipantSummary" />
+    <page titleKey="tc_xrt_Reviewers">
+    <section titleKey="">
+        <objectSet source="signoff_attachments.Signoff" defaultdisplay="tableDisplay" sortby="object_string" sortdirection="ascending">
+        <tableDisplay>
+            <property name="object_string"/>
+            <property name="fnd0DecisionRequired" modifiable="false"/>
+            <property name="decision" modifiable="false"/>
+            <property name="comments"/>
+        </tableDisplay>
+        <command actionKey="pasteAction" commandId="Awp0AddReviewer" renderingHint="commandbutton"/>
+        </objectSet>
+    </section>
+    </page>
+</rendering>

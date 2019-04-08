@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--
+Copyright 2017 Siemens Product Lifecycle Management Software Inc. All Rights Reserved.
+================================================================================
+Copyright 2017.
+Siemens Product Lifecycle Management Software Inc.
+All Rights Reserved.
+================================================================================
+Copyright 2017 Siemens Product Lifecycle Management Software Inc. All Rights Reserved.
+-->
+<package guid="A2221D216EF91455AAFFEDD27E3E3329" packageId="nv4base">
+    <displayName value="${packageId}.displayName"/>
+    <description value="${packageId}.description"/>
+    <contentType value="application"/>
+    <propertyContribution/>
+    <dependencies>
+        <dependency id="aws2" type="requires"/>
+        <dependency id="activeworkspacebom" type="requires"/>
+    </dependencies>
+    <artifact artifactType="fnd0_dataModelArtifact" guid="9E85F6E40675856C779FD3D1D1E57F18">
+        <deploymentActions>
+            <install>
+                <target description="Perform the file deployment actions including unzip, copy, and delete." name="fileProcessing">
+                    <unzip dest="${Teamcenter_root_path}" src="${Teamcenter_nv4base_path}/artifacts/nv4base_template.zip"/>
+                    <unzip dest="${Teamcenter_root_path}" src="${Teamcenter_nv4base_path}/artifacts/nv4base_install.zip"/>
+                    <copy file="${Teamcenter_nv4base_path}/artifacts/nv4base_icons.zip" todir="${Teamcenter_root_path}/install/nv4base"/>
+                </target>
+                <target description="Perform the operations that must be completed prior to the database being updated." name="preDatabaseUpdate">
+                    <TemplateDeploy name="nv4base"/>
+                </target>
+                <target description="Perform the operations that are database dependent." name="databaseUpdate"/>
+                <target description="Perform the operations that must be completed after the database update has occurred." name="postDatabaseUpdate"/>
+            </install>
+            <update>
+                <target description="Perform the file deployment actions including unzip, copy, and delete." name="fileProcessing">
+                    <unzip dest="${Teamcenter_root_path}" src="${Teamcenter_nv4base_path}/artifacts/nv4base_template.zip"/>
+                    <unzip dest="${Teamcenter_root_path}" src="${Teamcenter_nv4base_path}/artifacts/nv4base_install.zip"/>
+                    <copy file="${Teamcenter_nv4base_path}/artifacts/nv4base_icons.zip" force="true" overwrite="true" todir="${Teamcenter_root_path}/install/nv4base"/>
+                </target>
+                <target description="Perform the operations that must be completed prior to the database being updated." name="preDatabaseUpdate">
+                    <TemplateUpdate name="nv4base"/>
+                </target>
+                <target description="Perform the operations that are database dependent." name="databaseUpdate"/>
+                <target description="Perform the operations that must be completed after the database update has occurred." name="postDatabaseUpdate"/>
+            </update>
+        </deploymentActions>
+    </artifact>
+</package>

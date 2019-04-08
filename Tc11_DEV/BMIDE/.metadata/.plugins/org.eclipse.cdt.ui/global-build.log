@@ -1,0 +1,7 @@
+09:12:25 **** Build of configuration Preference Configuration for project nv4base ****
+nmake -f makefile.wntx64 all 
+Cannot run program "nmake": The directory name is invalid.
+
+
+Error: Program "nmake" not found in PATH
+PATH=[C:/PROGRA~1/Java/JDK18~1.0_1/jre/bin/server;C:/PROGRA~1/Java/JDK18~1.0_1/jre/bin;C:/PROGRA~1/Java/JDK18~1.0_1/jre/lib/amd64;C:\PROGRA~1\Java\JDK18~1.0_1\jre\bin;C:\Program Files\Java\jdk1.8.0_161\bin;C:\NorthVolt\Siemens\Teamcenter11\TCRoot\lib;~your_fms_home_dir~\bin;~your_fms_home_dir~\lib;~your_fms_home_dir~;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Microsoft MPI\Bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn\;C:\Program Files\Microsoft SQL Server\130\DTS\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\ManagementStudio\;C:\Program Files\Java\jdk1.8.0_161\jre\bin;C:\Program Files\Java\jdk1.8.0_161\bin;C:\Program Files\Git\cmd;C:\Program Files\TortoiseGit\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;C:\NorthVolt\Siemens\Teamcenter11\TCRoot\bmide\client;]

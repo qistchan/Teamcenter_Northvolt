@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+=======================================================================
+Copyright 2009.
+Siemens Product Lifecycle Management Software Inc.
+All Rights Reserved.
+=======================================================================
+     Filename: AWC_Ng5_DrawingRevisionSaveAs.xml
+
+    Style sheet rendering for Item creation.
+=======================================================================
+-->
+
+<rendering>  
+<page title="Item Revision Information" titleKey="tc_xrt_ItemInformation">
+
+			<property name="item_revision_id" renderingHint="autoassignrevid" />
+			<property name="object_name" column="25"/>
+			<property name="object_desc" />	
+			<separator/>
+			
+            <!-- OOTB configuration item check box is not visibile, you can remove the comment once is_configuration_item in createInput is turned on in BMIDE -->
+            <!--
+            <property name="is_configuration_item" renderingHint="checkbox" />
+            -->
+     </page>
+</rendering>

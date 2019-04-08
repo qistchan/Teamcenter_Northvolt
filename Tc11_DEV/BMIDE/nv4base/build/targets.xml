@@ -1,0 +1,112 @@
+<!--
+==================================================
+ Copyright 2013.
+ Siemens Product Lifecycle Management Software Inc.
+ All Rights Reserved.
+ ==================================================
+ ==================================================
+             Auto-generated source
+                 DO NOT EDIT
+ ==================================================
+ -->
+
+
+<project name="nv4base"   >
+
+
+
+   	
+   	
+    <target name="setPackageList" >
+        
+		<property name="package.list.file"		location="${library.classes.home}/package.properties" />
+		
+        <!-- Get a list of folder's in this Jar -->
+        <path id="folder.list">
+            <dirset  dir="${library.source.home}" >
+                <include name="com/*/schemas/**"   />
+                <include name="com/*/services/**" />                
+            </dirset>
+        </path>
+
+        <!-- Convert the folders to package names -->
+        <property name="class.folder.list"  refid="folder.list" />
+        <echo file="${package.list.file}"   message="package.list=${class.folder.list}" /> 
+
+        <replace file="${package.list.file}">
+             <replacefilter token="${library.source.home}" value=""  /> 
+             <replacefilter token="${path.separator}"      value="," /> 
+             <replacefilter token="/"                      value="." /> 
+             <replacefilter token="\"                      value="." /> 
+             <replacefilter token=".com."                  value="com." /> 
+         </replace>
+        
+         <property file="${package.list.file}" /> 
+         <delete   file="${package.list.file}" /> 
+    </target>	
+	
+	<target name="create-manifest" depends="setPackageList" >
+		
+		<property name="manifest.file"			location="${library.classes.home}/META-INF/MANIFEST.MF" />
+  		<mkdir  dir="${library.classes.home}/META-INF" />
+  		
+  		<tstamp>
+            <format property="NOW" pattern="MMMM d, yyyy" locale="en"/>
+        </tstamp>
+
+        <manifest file="${manifest.file}" mode="replace">
+            <attribute name="Implementation-Title"          value="Teamcenter Services ${service.library.name} ${service.library.sub.name}"/>
+            <attribute name="Implementation-Version"        value="${teamcenter.version}, ${NOW}"/>
+            <attribute name="Implementation-Vendor"         value="Siemens Product Lifecycle Management Inc."/>
+            <attribute name="Bundle-ManifestVersion"        value="2"/>
+            <attribute name="Bundle-Name"                   value="Teamcenter Services ${service.library.name} ${service.library.sub.name}"/>
+            <attribute name="Bundle-SymbolicName"           value="${service.library.name}${service.library.sub.name}"/>
+            <attribute name="Bundle-Version"                value="${teamcenter.version}"/>
+            <attribute name="TC-Version"                    value="${teamcenter.version.label}"/>
+            <attribute name="Bundle-ClassPath"              value="."/>
+            <attribute name="Bundle-Vendor"                 value="Siemens Product Lifecycle Management Inc."/>
+            <attribute name="Bundle-Localization"           value="plugin"/>
+            <attribute name="Bundle-ActivationPolicy"       value="lazy" />
+            <attribute name="Require-Bundle"                value="${required.bundes}" />
+            <attribute name="Export-Package"                value="${package.list}" />
+            <attribute name="Bundle-RequiredExecutionEnvironment" value="JavaSE-1.6" />
+        </manifest>
+
+	</target>
+	
+	
+	
+	
+	<target name="releaseJar" depends="init,create-manifest"  if="build.release.jar" >	
+		<jar destfile="${jar.folder.home}/${library.jar.name}" manifest="${manifest.file}" >
+          	<fileset dir="${library.classes.home}"/>
+   		</jar> 
+	</target>
+	
+	
+	<target name="debugJar" depends="init,create-manifest"  if="build.debug.jar" >
+		<property name="manifest.file"			location="${library.classes.home}/META-INF/MANIFEST.MF" />
+		<jar destfile="${jar.folder.home}/${library.jar.name}" manifest="${manifest.file}">
+         	<fileset dir="${library.classes.home}"/>
+            <fileset dir="${library.source.home}" includes="**/*.java"/>
+		</jar> 
+	</target>
+	
+	<target name="compile" depends="init,setup">
+		<condition property="build.release.jar">
+      	    <equals arg1="${javac.debug}"          arg2="false"/>
+  		</condition>
+		<condition property="build.debug.jar">
+      		<equals arg1="${javac.debug}"          arg2="true"/>
+  		</condition> 
+  			
+		<property name="manifest.file"			location="${library.classes.home}/META-INF/MANIFEST.MF" />
+		<javac destdir="${library.classes.home}" 
+		       debug="${javac.debug}" >
+            <src path="${library.source.home}"/>
+            <classpath refid="build.classpath"/>
+        </javac>
+   	</target>
+	
+	
+</project>
