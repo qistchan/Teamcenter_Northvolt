@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TcBusinessData xmlns="http://teamcenter.com/BusinessModel/TcBusinessData" batchXSDVersion="1.0"
+    Date="Wed Mar 27 08:33:35 AM 2019"
+>
+<!--This file can be used to update the LOV values and sub-LOV attachments on LOV: NV4_Building_LOV. 
+1. Please ensure that the LOV has been deployed to the Teamcenter Server.  
+2. Modify this file by replacing the commented code below with your values. 
+3. Modify the localization files in the lang folder by replacing the commented code with your values. 
+4. Run the command: 
+bmide_manage_batch_lovs -u=<username> -p=<password> -g=<group> -option=update -file=<BMIDE Project Folder>\output\wntx64\Samples\LOVS\NV4_Building_LOV\NV4_Building_LOV.xml.-->
+
+  <Add>
+<!--The following sub-LOV attachment, enclosed in comments, is there as a sample. You can replace it by your own sub-LOV attachments, for creating cascading LOVs.-->
+<!--
+<TcLOVValueSubLOVAttach conditionName="isTrue" subLOVName="SampleSubLOV" targetLOVName="NV4_Building_LOV" targetValue="SampleLOVValue"/>
+-->
+  </Add>
+  <Change>
+    <TcLOV name="NV4_Building_LOV" lovType="ListOfValuesString" usage="Exhaustive"
+        description="" isManagedExternally="true">
+<TcLOVValue value="TS1" description="" conditionName="isTrue" />
+	<TcLOVValue value="TS2" description="" conditionName="isTrue" />
+	<TcLOVValue value="DS1" description="" conditionName="isTrue" />
+	<TcLOVValue value="DS2" description="" conditionName="isTrue" />
+	<TcLOVValue value="DS3" description="" conditionName="isTrue" />
+	<TcLOVValue value="DS4" description="" conditionName="isTrue" />
+	<TcLOVValue value="FA1" description="" conditionName="isTrue" />
+	<TcLOVValue value="FA2" description="" conditionName="isTrue" />
+	<TcLOVValue value="US1" description="" conditionName="isTrue" />
+	<TcLOVValue value="US2" description="" conditionName="isTrue" />
+	<TcLOVValue value="CW1" description="" conditionName="isTrue" />
+	<TcLOVValue value="OF1" description="" conditionName="isTrue" />
+	<TcLOVValue value="SB1" description="" conditionName="isTrue" />
+	<TcLOVValue value="TB1" description="" conditionName="isTrue" />
+	<TcLOVValue value="ES1" description="" conditionName="isTrue" />
+	<TcLOVValue value="ES2" description="" conditionName="isTrue" />
+	<TcLOVValue value="ER1" description="" conditionName="isTrue" />
+	<TcLOVValue value="ER2" description="" conditionName="isTrue" />
+	<TcLOVValue value="NR1" description="" conditionName="isTrue" />
+	<TcLOVValue value="NR2" description="" conditionName="isTrue" />
+	<TcLOVValue value="EL1" description="" conditionName="isTrue" />
+	<TcLOVValue value="EL2" description="" conditionName="isTrue" />
+	<TcLOVValue value="SE1" description="" conditionName="isTrue" />
+	<TcLOVValue value="SE2" description="" conditionName="isTrue" />
+	<TcLOVValue value="SE3" description="" conditionName="isTrue" />
+	<TcLOVValue value="SE4" description="" conditionName="isTrue" />
+	<TcLOVValue value="OP1" description="" conditionName="isTrue" />
+	<TcLOVValue value="OP2" description="" conditionName="isTrue" />
+	<TcLOVValue value="OP3" description="" conditionName="isTrue" />
+	<TcLOVValue value="OP4" description="" conditionName="isTrue" />
+    </TcLOV>
+  </Change>
+</TcBusinessData>

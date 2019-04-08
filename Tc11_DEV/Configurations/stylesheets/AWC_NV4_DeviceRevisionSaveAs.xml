@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+=======================================================================
+
+=======================================================================
+     Filename: ItemSaveAs.xml
+
+    Style sheet rendering for Item saveAs.
+=======================================================================
+-->
+
+<rendering>
+    
+    <page title="Item Information" titleKey="tc_xrt_ItemInformation">
+         <property name="item_id" />            
+         <property name="object_name" />
+         <property name="object_desc" />    
+			<property name="nv4_supplier_item"/>
+    </page>
+    
+</rendering>   

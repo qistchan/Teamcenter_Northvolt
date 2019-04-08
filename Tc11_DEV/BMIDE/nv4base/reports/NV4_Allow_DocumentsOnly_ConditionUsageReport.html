@@ -1,0 +1,735 @@
+<HTML>
+<style type="text/css">
+
+table
+    {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto 1.5em auto;
+    border: 1px solid rgb(50%, 50%, 50%);
+    border-collapse:collapse;
+    }
+
+th
+    {
+    font: bold 16px "Times New Roman";
+    text-align: left;
+    padding: 4px 4px 4px 4px;
+    border: 1px solid rgb(50%, 50%, 50%);
+    background: #CCCCFF;
+    vertical-align:top;
+    }
+
+td
+    {
+    font: normal 14px "Times New Roman";
+    padding: 4px 4px 4px 4px;
+    border: 1px solid rgb(50%, 50%, 50%);
+    vertical-align:top;
+    }
+
+table.noborder
+    {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto 1.5em auto;
+    border: 0px solid rgb(0, 0, 0);
+    border-collapse:collapse;
+    }
+
+table.noborderAuto
+    {
+    width: auto;
+    padding: 0;
+    margin: 0 auto 1.5em auto;
+    border: 0px solid rgb(0, 0, 0);
+    border-collapse:collapse;
+    }
+
+table.noborderAutowidthAlignright
+    {
+    width: auto;
+    padding: 0;
+    margin: 0 0 0 auto;
+    border: 0px solid rgb(0, 0, 0);
+    border-collapse:collapse;
+    }
+
+table.tight
+    {
+    padding: 0;
+    margin: 0 auto 0.0em auto;
+    border: 1px solid rgb(50%, 50%, 50%);
+    border-collapse:collapse;
+    }
+
+table.nobordertight
+    {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto 0.0em auto;
+    border: 0px solid rgb(0, 0, 0);
+    border-collapse:collapse;
+    }
+
+th.light { background:#EEEEFF; font: bold 16px "Times New Roman"  }
+th.bold { font: bold 24px "Times New Roman"; }
+th.boldAligncenter { font: bold 24px "Times New Roman"; text-align: center; }
+
+td.diff { background:#ffffcc; }
+td.userAction { background:#ffebeb; }
+td.noUserAction { background:#ebffeb; }
+td.diffChange { background:#ffffcc; }
+td.diffAdd { background:#ebffeb; }
+td.diffRemove { background:#ffebeb; }
+td.merged { background:#ebebff; }
+td.bold { font: bold 14px "Times New Roman"; }
+td.boldLargefontAligncenter { font: bold 18px "Times New Roman";  text-align: center; }
+td.light { border: 0px solid rgb(0, 0, 0); background:#EEEEFF; }
+td.noborder { border: 0px }
+td.nobordernopadding { border: 0px;  padding: 0; }
+th.nobordernopadding { border: 0px;  padding: 0; }
+td.rowColor { background:#ffffcc; }
+td.width15 { width: 15%; }
+td.width25 { width: 25%; }
+td.width75 { width: 75%; }
+td.width85 { width: 85%; }
+td.highlightCell { font: bold 16px "Times New Roman"; background:#F8E0E0; }
+th.SiemensNoBorderBold { border: 0px; background:rgb(256, 256, 256); font-family:Segoe UI; font-weight:bold; font-size:14px; color:rgb(153, 153, 153) }
+td.SiemensNoBorderBold { border: 0px; font-family:Segoe UI; font-size:14px; font-weight:bold; }
+td.SiemensNoBorderWhiteBG { border: 0px; font-family:Segoe UI; font-size:12px; }
+td.SiemensNoBorderGrayBG { border: 0px; font-family:Segoe UI; font-size:12px; background:rgb(238, 238, 238); }
+td.SiemensNoBorderDiff { border: 0px; font-family:Segoe UI; font-size:12px; background:#ffffcc; }
+td.reportTitle { border: 0px; font-family:Segoe UI; font-size:30px; text-align:center; color:rgb(85, 160, 185);  }
+td.tcVersion { border: 0px; font-family:Segoe UI; font-size:14px; text-align:right; color:rgb(85, 160, 185);  }
+td.pageTitle { border: 0px; font-family:Segoe UI; font-size:24px; text-align:center; color:rgb(85, 160, 185);  }
+td.pageTitle2 { border: 0px; font-family:Segoe UI; font-size:20px; text-align:center; color:rgb(85, 160, 185);  }
+td.reportDate { border: 0px; font-family:Segoe UI; font-size:12px; text-align:center; color:rgb(85, 160, 185);  }
+td.siteID { border: 0px; font-family:Segoe UI; font-size:12px; text-align:left; vertical-align:bottom; color:rgb(153, 153, 153);  }
+td.siteName { border: 0px; font-family:Segoe UI; font-size:12px; text-align:left; vertical-align:top; color:rgb(153, 153, 153);  }
+td.releaseString { border: 0px; font-family:Segoe UI; font-size:12px; text-align:center; vertical-align:top; color:rgb(153, 153, 153);  }
+div.reportTitle { border: 0px; font-family:Segoe UI; font-size:30px; text-align:center; color:rgb(85, 160, 185);  }
+div.reportDate { border: 0px; font-family:Segoe UI; font-size:12px; text-align:center; color:rgb(85, 160, 185);  }
+div.SiemensPropertyLabel { color:rgb(153, 153, 153); font-family:Segoe UI; font-size:12px; display:inline; vertical-align:top; }
+div.SiemensPropertyValueInline { color:rgb(0, 0, 0); font-family:Segoe UI; font-size:12px; display:inline; }
+div.SiemensPropertyValueBlock { color:rgb(0, 0, 0); font-family:Segoe UI; font-size:12px; display:block; }
+div.PropertySection { display:block; padding-top:2px; padding-bottom:2px;  }
+div.spacer5px { height:5px; }
+div.spacer { height:10px; }
+div.Spacer2 { height:20px; }
+div.Spacer3 { height:30px; }
+div.Spacer4 { height:40px; }
+div.Block { display:block; }
+div.floatLeft { float:left; }
+div.InlineBlock { display:inline-block; }
+div.tableRow { display:table-row; }
+div.tableHeaderCell { display:table-cell; border-bottom: 1px solid rgb(153, 153, 153); color:rgb(153, 153, 153); font-family:Segoe UI; font-weight:bold; font-size:12px; padding-top:2px; padding-bottom:2px; padding-left:5px; padding-right:5px; }
+div.tableDividerCell { display:table-cell; color:rgb(153, 153, 153); font-family:Segoe UI; font-weight:bold; font-size:12px; padding-top:15px; padding-bottom:15px; padding-left:15px; padding-right:15px; }
+div.tableCell  { display:table-cell; background-color:rgb(256, 256, 256); color:rgb(0, 0, 0); font-family:Segoe UI; font-size:12px; padding-top:2px; padding-bottom:2px; padding-left:5px; padding-right:5px;}
+div.tableCell2 { display:table-cell; background-color:rgb(238, 238, 238); color:rgb(0, 0, 0); font-family:Segoe UI; font-size:12px; padding-top:2px; padding-bottom:2px; padding-left:5px; padding-right:5px;}
+div.tableCellGrey { display:table-cell; color:rgb(153, 153, 153); font-family:Segoe UI; font-size:12px; padding-top:2px; padding-bottom:2px; padding-left:5px; padding-right:5px;}
+div.tableCellDiff { display:table-cell; background-color:rgb(255, 240, 155); color:rgb(0, 0, 0); font-family:Segoe UI; font-size:12px; padding-top:2px; padding-bottom:2px; padding-left:5px; padding-right:5px;}
+div.tableCellSkipDiff { display:table-cell; background-color:rgb(240, 240, 240); color:rgb(0, 0, 0); font-family:Segoe UI; font-size:12px; padding-top:2px; padding-bottom:2px; padding-left:5px; padding-right:5px;}
+div.tableCellRed { display:table-cell; background-color:rgb(255, 235, 235); color:rgb(153, 153, 153); font-family:Segoe UI; font-size:12px; padding-top:2px; padding-bottom:2px; padding-left:5px; padding-right:5px;}
+div.tableCellImpactsTarget { display:table-cell; background-color:rgb(205, 230, 235); color:rgb(0, 0, 0); font-family:Segoe UI; font-size:12px; padding-top:2px; padding-bottom:2px; padding-left:5px; padding-right:5px;}
+div.tableCellDiffFromSource { display:table-cell; background-color:rgb(255, 240, 155); color:rgb(0, 0, 0); font-family:Segoe UI; font-size:12px; padding-top:2px; padding-bottom:2px; padding-left:5px; padding-right:5px;}
+div.tightTableHeaderCell { display:table-cell; border-bottom: 1px solid rgb(153, 153, 153); color:rgb(153, 153, 153); font-family:Segoe UI; font-weight:bold; font-size:12px; font-size:12px; padding-top:2px; padding-bottom:2px; padding-left:2px; padding-right:2px; border:1px solid rgb(200, 200, 200); }
+div.tightTableHeaderColoredCell { display:table-cell;  background-color:rgb(205, 230, 235); border-bottom: 1px solid rgb(153, 153, 153); color:rgb(80, 90, 100); font-family:Segoe UI; font-weight:bold; font-size:12px; font-size:12px; padding-top:2px; padding-bottom:2px; padding-left:2px; padding-right:2px; border:1px solid rgb(200, 200, 200); }
+div.tightTableCell  { display:table-cell; background-color:rgb(256, 256, 256); color:rgb(0, 0, 0); font-family:Segoe UI; font-size:12px; padding-top:2px; padding-bottom:2px; padding-left:2px; padding-right:2px; border:1px solid rgb(200, 200, 200);}
+div.tightTableCell2 { display:table-cell; background-color:rgb(238, 238, 238); color:rgb(0, 0, 0); font-family:Segoe UI; font-size:12px; padding-top:2px; padding-bottom:2px; padding-left:2px; padding-right:2px; border:1px solid rgb(200, 200, 200);}
+div.tightTableCellHighlight { display:table-cell; background-color:rgb(250, 226, 237); color:rgb(0, 0, 0); font-family:Segoe UI; font-size:14px; font-weight:bold; padding-top:2px; padding-bottom:2px; padding-left:2px; padding-right:2px; border:1px solid rgb(200, 200, 200);}
+div.tableHeaderCell3 { display:table-cell; border-bottom: 1px solid rgb(153, 153, 153); color:rgb(153, 153, 153); font-family:Segoe UI; font-weight:bold; font-size:12px; padding-top:2px; padding-bottom:2px; padding-left:2px; padding-right:2px; }
+div.tableCell3  { display:table-cell; background-color:rgb(256, 256, 256); color:rgb(0, 0, 0); font-family:Segoe UI; font-size:12px; padding-top:2px; padding-bottom:2px; padding-left:2px; padding-right:2px;}
+div.tableHeaderCell14 { display:table-cell; color:rgb(153, 153, 153); font-family:Segoe UI; font-weight:bold; font-size:14px; text-decoration:underline; padding-top:2px; padding-bottom:2px; padding-left:2px; padding-right:2px; }
+div.tableCell14  { display:table-cell; background-color:rgb(256, 256, 256); color:rgb(0, 0, 0); font-family:Segoe UI; font-size:12px; padding-top:2px; padding-bottom:2px; padding-left:2px; padding-right:2px;}
+div.tableCell14Diff  { display:table-cell; background-color:rgb(255, 240, 155); color:rgb(0, 0, 0); font-family:Segoe UI; font-size:12px; padding-top:2px; padding-bottom:2px; padding-left:2px; padding-right:2px;}
+div.tableCell5a { display:table-cell; color:rgb(85, 160, 185); font-family:Segoe UI; font-size:12px; padding-top:2px; padding-bottom:2px; padding-left:2px; padding-right:2px;}
+div.tableCell5b { display:table-cell; color:rgb(85, 160, 185); font-family:Segoe UI; font-size:12px; padding-top:2px; padding-bottom:2px; padding-left:2px; padding-right:2px;}
+div.SiemensHeading1 { color:rgb(0, 100, 135); font-family:Segoe UI; font-weight:bold; font-size:20px ;display:block; }
+div.SiemensHeading1FloatLeft { float:left; color:rgb(0, 100, 135); font-family:Segoe UI;font-weight:bold; font-size:20px ;display:block; }
+div.SiemensHeading2 { color:rgb(85, 160, 185); font-family:Segoe UI; font-size:15px; display:block; }
+div.objectHeader { height:60px; color:rgb(0, 100, 135); font-family:Segoe UI; font-weight:bold; font-size:30px }
+div.objectDataModelDescription { width:95%; color:rgb(0, 0, 0); font-family:Segoe UI; font-size:12px; }
+div.pageFooter { clear:both; text-align:center; color:rgb(153, 153, 153); font-family:Segoe UI; font-size:12px; }
+div.tableheader { color:rgb(153, 153, 153); font-family:Segoe UI; font-weight:bold; font-size:12px; display:inline; }
+div.groupPageTitle { border: 0px; font-family:Segoe UI; font-size:18px; text-align:left; font-weight:bold; color:rgb(0, 100, 135);  }
+div.groupSubTitle {  border: 0px; font-family:Segoe UI; font-size:16px; text-align:left; font-weight:bold; color:rgb(0, 100, 135);  }
+div.pageTitle {    border: 0px; font-family:Segoe UI; font-size:24px; text-align:center; color:rgb(85, 160, 185);  }
+div.pageSubTitle { border: 0px; font-family:Segoe UI; font-size:20px; text-align:center; color:rgb(85, 160, 185);  }
+div.groupsPageEntry { display:block; color:rgb(153, 153, 153); padding-top:5px; font-family:Segoe UI; font-size:14px; }
+div.pageDescription { color:rgb(0, 0, 0); font-family:Segoe UI; font-size:12px; text-align:left; }
+div.noRulesFound { color:rgb(0, 0, 0); font-family:Segoe UI; font-size:14px; text-align:left; }
+div.groupPageDescription { color:rgb(0, 0, 0); font-family:Segoe UI; font-size:12px; text-align:left; }
+div.thumbnailBox { float:left; text-align:center; width:180px; height:180px; border:1px solid rgb(85, 160, 185); margin:20px; padding:10px; }
+div.thumbnailBoxHighlightCompare { background-color:rgb(255, 240, 155); float:left; text-align:center; width:180px; height:180px; border:1px solid rgb(85, 160, 185); margin:20px; padding:10px; }
+div.thumbnailBoxHighlightImpact { background-color:rgb(205, 230, 235); float:left; text-align:center; width:180px; height:180px; border:1px solid rgb(85, 160, 185); margin:20px; padding:10px; }
+div.thumbnailBoxLabel { color:rgb(0, 100, 135); font-family:Segoe UI; font-weight:bold; font-size:18px; }
+div.tableCellPrimaryElementMenuHeader { display:table-cell; color:rgb(153, 153, 153); font-family:Segoe UI; font-size:12px; text-decoration:underline; padding-top:0px; padding-bottom:0px; padding-left:2px; padding-right:2px;}
+div.tableCellPrimaryElementMenu { display:table-cell; color:rgb(153, 153, 153); font-family:Segoe UI; font-size:12px; padding-top:0px; padding-bottom:0px; padding-left:2px; padding-right:2px;}
+div.tableCellPrimaryElementMenuHighlight { display:table-cell; color:rgb(0, 0, 0); font-family:Segoe UI; font-weight:bold; font-size:12px; padding-top:0px; padding-bottom:0px; padding-left:2px; padding-right:2px;}
+div.tableCellPrimaryElementMenuHighlightWithColor { display:table-cell; background-color:rgb(255, 240, 155); color:rgb(0, 0, 0); font-family:Segoe UI; font-weight:bold; font-size:12px; padding-top:0px; padding-bottom:0px; padding-left:2px; padding-right:2px;}
+div.pageTab { display:inline; color:rgb(80, 90, 100); font-family:Segoe UI; font-size:20px; padding-top:0px; padding-bottom:0px; padding-left:10px; padding-right:10px;}
+div.pageTabHighlight { display:inline; color:rgb(0, 100, 135); font-family:Segoe UI; font-weight:bold; font-size:20px; padding-top:0px; padding-bottom:0px; padding-left:10px; padding-right:10px;}
+div.reportDetailsTableCell { display:table-cell; color:rgb(153, 153, 153); font-family:Segoe UI; font-size:12px; padding-top:0px; padding-bottom:0px; padding-left:2px; padding-right:2px;}
+a.pageMenuAnchor { color: rgb(0, 100, 135); text-decoration: none;}
+td.SiemensPropertyLabel { border: 0px; color:rgb(153, 153, 153); font-family:Segoe UI; font-size:12px; display:inline; vertical-align:top; }
+td.SiemensPropertyValueInline { border: 0px; color:rgb(0, 0, 0); font-family:Segoe UI; font-size:12px; display:inline; }
+tr.noborder { border: 0px }
+
+</style>
+
+<CENTER>
+<H2>Condition Usage Report</H2>
+<H2>Condition = NV4_Allow_DocumentsOnly </H2>
+<H3>Fri Mar 29 06:35:21 UTC 2019</H3>
+<BR>
+<P>Copyright 2019 Siemens Product Lifecycle Management Software Inc. All Rights reserved.<BR>
+This documentation is proprietary and confidential to Siemens Product Lifecycle Management Software Inc.<BR>
+</P>
+</CENTER>
+<BR>
+<BR>
+<BR>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left"><FONT SIZE="+2">
+<B><a name="Description">Description</a></B></FONT>
+</TH>
+</TR>
+</TABLE>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR>
+<TD valign="top" align="left"  colspan="1">&nbsp;Description</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;This report lists the details of the specified condition and list all data model elements that use the condition</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left"><FONT SIZE="+2">
+<B><a name="Report Criteria">Report Criteria</a></B></FONT>
+</TH>
+</TR>
+</TABLE>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Criteria</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="80%">&nbsp;Value</TH>
+</TR>
+<TR>
+<TD valign="top" align="left"  colspan="1">&nbsp;Template Name:</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;nv4base</TD>
+</TR>
+<TR>
+<TD valign="top" align="left"  colspan="1">&nbsp;Condition Name:</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;NV4_Allow_DocumentsOnly</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<BR>
+<BR>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left"><FONT SIZE="+2">
+<B><a name="Condition Details">Condition Details</a></B></FONT>
+</TH>
+</TR>
+</TABLE>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Attribute</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="80%">&nbsp;Value</TH>
+</TR>
+<TR>
+<TD valign="top" align="left"  colspan="1">&nbsp;Name</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;NV4_Allow_DocumentsOnly</TD>
+</TR>
+<TR>
+<TD valign="top" align="left"  colspan="1">&nbsp;Description</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+</TR>
+<TR>
+<TD valign="top" align="left"  colspan="1">&nbsp;Package</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+</TR>
+<TR>
+<TD valign="top" align="left"  colspan="1">&nbsp;Secured?</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;false</TD>
+</TR>
+<TR>
+<TD valign="top" align="left"  colspan="1">&nbsp;Expression</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;grmsec.object_type!="DocumentRevision"</TD>
+</TR>
+<TR>
+<TD valign="top" align="left"  colspan="1">&nbsp;Input Parameter List</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+</TR>
+<TR>
+<TD valign="top" align="left"  colspan="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Condition Parameter = imgrm</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+</TR>
+<TR>
+<TD valign="top" align="left"  colspan="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parameter Name</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;imgrm</TD>
+</TR>
+<TR>
+<TD valign="top" align="left"  colspan="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parameter Type</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;ImanGRM</TD>
+</TR>
+<TR>
+<TD valign="top" align="left"  colspan="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Condition Parameter = grmpri</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+</TR>
+<TR>
+<TD valign="top" align="left"  colspan="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parameter Name</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;grmpri</TD>
+</TR>
+<TR>
+<TD valign="top" align="left"  colspan="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parameter Type</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;NV4_NVMCADRevision</TD>
+</TR>
+<TR>
+<TD valign="top" align="left"  colspan="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Condition Parameter = grmsec</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+</TR>
+<TR>
+<TD valign="top" align="left"  colspan="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parameter Name</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;grmsec</TD>
+</TR>
+<TR>
+<TD valign="top" align="left"  colspan="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parameter Type</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;ItemRevision</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left"><FONT SIZE="+2">
+<B><a name="Other Conditions that use the NV4_Allow_DocumentsOnly condition">Other Conditions that use the NV4_Allow_DocumentsOnly condition</a></B></FONT>
+</TH>
+</TR>
+</TABLE>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF"  colspan="1" width="25%">&nbsp;Condition</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF"  colspan="1" width="50%">&nbsp;Expression</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF"  colspan="1" width="25%">&nbsp;Template</TH>
+</TR>
+<TR>
+<TD valign="top" align="left"  colspan="1">&nbsp;None Found</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left"><FONT SIZE="+2">
+<B><a name="LOV Attachments that use the NV4_Allow_DocumentsOnly condition.">LOV Attachments that use the NV4_Allow_DocumentsOnly condition.</a></B></FONT>
+</TH>
+</TR>
+</TABLE>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="25%">&nbsp;LOV</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="15%">&nbsp;Business Object</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="15%">&nbsp;</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="15%">&nbsp;</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="15%">&nbsp;Business Object</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="15%">&nbsp;Template</TH>
+</TR>
+<TR>
+<TD valign="top" align="left"  colspan="1">&nbsp;None Found</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left"><FONT SIZE="+2">
+<B><a name="LOV Values that use the NV4_Allow_DocumentsOnly condition">LOV Values that use the NV4_Allow_DocumentsOnly condition</a></B></FONT>
+</TH>
+</TR>
+</TABLE>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;LOV</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Value</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="40%">&nbsp;Condition</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Template</TH>
+</TR>
+<TR>
+<TD valign="top" align="left"  colspan="1">&nbsp;None Found</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left"><FONT SIZE="+2">
+<B><a name="Sub-LOVs that use the NV4_Allow_DocumentsOnly condition">Sub-LOVs that use the NV4_Allow_DocumentsOnly condition</a></B></FONT>
+</TH>
+</TR>
+</TABLE>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Target LOV</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Target LOV Value</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Sub LOV</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Condition</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Template</TH>
+</TR>
+<TR>
+<TD valign="top" align="left"  colspan="1">&nbsp;None Found</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left"><FONT SIZE="+2">
+<B><a name="Business Object Display Rules that use the NV4_Allow_DocumentsOnly condition">Business Object Display Rules that use the NV4_Allow_DocumentsOnly condition</a></B></FONT>
+</TH>
+</TR>
+</TABLE>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Business Object</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Organization</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Accessor Type</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Condition</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Template</TH>
+</TR>
+<TR>
+<TD valign="top" align="left"  colspan="1">&nbsp;None Found</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left"><FONT SIZE="+2">
+<B><a name="Deep Copy Rules that use the NV4_Allow_DocumentsOnly condition">Deep Copy Rules that use the NV4_Allow_DocumentsOnly condition</a></B></FONT>
+</TH>
+</TR>
+</TABLE>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="15%">&nbsp;Target Type</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="15%">&nbsp;ReflRefPropertyname</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="15%">&nbsp;Object Type</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="15%">&nbsp;Operation</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="10%">&nbsp;Action</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="10%">&nbsp;Condition</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="10%">&nbsp;PropertyType</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="15%">&nbsp;Template</TH>
+</TR>
+<TR>
+<TD valign="top" align="left"  colspan="1">&nbsp;None Found</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left"><FONT SIZE="+2">
+<B><a name="Naming Rule Attachments that use the NV4_Allow_DocumentsOnly condition">Naming Rule Attachments that use the NV4_Allow_DocumentsOnly condition</a></B></FONT>
+</TH>
+</TR>
+</TABLE>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Naming Rule</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Business Object</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Property</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Condition</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Template</TH>
+</TR>
+<TR>
+<TD valign="top" align="left"  colspan="1">&nbsp;None Found</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left"><FONT SIZE="+2">
+<B><a name="Property Formatter Attachments that use the NV4_Allow_DocumentsOnly condition">Property Formatter Attachments that use the NV4_Allow_DocumentsOnly condition</a></B></FONT>
+</TH>
+</TR>
+</TABLE>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Formatter</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Business Object</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Property</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Condition</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Template</TH>
+</TR>
+<TR>
+<TD valign="top" align="left"  colspan="1">&nbsp;None Found</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left"><FONT SIZE="+2">
+<B><a name="Revision Naming Rule Attachments that use the NV4_Allow_DocumentsOnly condition">Revision Naming Rule Attachments that use the NV4_Allow_DocumentsOnly condition</a></B></FONT>
+</TH>
+</TR>
+</TABLE>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Naming Rule</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Business Object</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Property</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Condition</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Template</TH>
+</TR>
+<TR>
+<TD valign="top" align="left"  colspan="1">&nbsp;None Found</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left"><FONT SIZE="+2">
+<B><a name="Property Renderer Attachments that use the NV4_Allow_DocumentsOnly condition">Property Renderer Attachments that use the NV4_Allow_DocumentsOnly condition</a></B></FONT>
+</TH>
+</TR>
+</TABLE>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Property Renderer</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Business Object</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Property</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Condition</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Template</TH>
+</TR>
+<TR>
+<TD valign="top" align="left"  colspan="1">&nbsp;None Found</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left"><FONT SIZE="+2">
+<B><a name="Extension Rule Attachments that use the NV4_Allow_DocumentsOnly condition">Extension Rule Attachments that use the NV4_Allow_DocumentsOnly condition</a></B></FONT>
+</TH>
+</TR>
+</TABLE>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="15%">&nbsp;Extension</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="15%">&nbsp;Element Name</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="15%">&nbsp;Property</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="15%">&nbsp;Extension Point</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="15%">&nbsp;Operation</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="10%">&nbsp;Condition</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="15%">&nbsp;Template</TH>
+</TR>
+<TR>
+<TD valign="top" align="left"  colspan="1">&nbsp;None Found</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left"><FONT SIZE="+2">
+<B><a name="Verification Rules that use the NV4_Allow_DocumentsOnly condition">Verification Rules that use the NV4_Allow_DocumentsOnly condition</a></B></FONT>
+</TH>
+</TR>
+</TABLE>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="15%">&nbsp;Functionality</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="15%">&nbsp;Applies to Business Object</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="15%">&nbsp;Context Filter</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="15%">&nbsp;Sub Group</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Condition</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Template</TH>
+</TR>
+<TR>
+<TD valign="top" align="left"  colspan="1">&nbsp;None Found</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left"><FONT SIZE="+2">
+<B><a name="Propagation Rules that use the NV4_Allow_DocumentsOnly condition">Propagation Rules that use the NV4_Allow_DocumentsOnly condition</a></B></FONT>
+</TH>
+</TR>
+</TABLE>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="9%">&nbsp;Source Type</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="9%">&nbsp;Destination Type</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="7%">&nbsp;Property Type</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="9%">&nbsp;Relation/Reference Property Name</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="7%">&nbsp;Operation</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="13%">&nbsp;Propagation Group</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="4%">&nbsp;Action Condition</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="4%">&nbsp;Condition</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="6%">&nbsp;Propagation Style</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="6%">&nbsp;Direction</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="6%">&nbsp;Background?</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="7%">&nbsp;Secured?</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="4%">&nbsp;COTS?</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="9%">&nbsp;Template</TH>
+</TR>
+<TR>
+<TD valign="top" align="left"  colspan="1">&nbsp;None Found</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left"><FONT SIZE="+2">
+<B><a name="Concatenation Rules that use the NV4_Allow_DocumentsOnly condition">Concatenation Rules that use the NV4_Allow_DocumentsOnly condition</a></B></FONT>
+</TH>
+</TR>
+</TABLE>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Name</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;ID Generator</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Name</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Condition</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Template</TH>
+</TR>
+<TR>
+<TD valign="top" align="left"  colspan="1">&nbsp;None Found</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left"><FONT SIZE="+2">
+<B><a name="GRM Rules that use the NV4_Allow_DocumentsOnly condition">GRM Rules that use the NV4_Allow_DocumentsOnly condition</a></B></FONT>
+</TH>
+</TR>
+</TABLE>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="21%">&nbsp;Primary Object</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="21%">&nbsp;Secondary Object</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="16%">&nbsp;Relation Object</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="22%">&nbsp;Condition</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="10%">&nbsp;Template</TH>
+</TR>
+<TR>
+<TD valign="top" align="left"  colspan="1">&nbsp;NV4_NVMCADRevision</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;ItemRevision</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;NV4_rHasProductSpecs</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;NV4_Allow_DocumentsOnly</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;nv4base</TD>
+</TR>
+</TABLE>
+<BR>
+<BR>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left"><FONT SIZE="+2">
+<B><a name="IRDCs that use the NV4_Allow_DocumentsOnly condition">IRDCs that use the NV4_Allow_DocumentsOnly condition</a></B></FONT>
+</TH>
+</TR>
+</TABLE>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Name</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Applies To Business Object</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Description</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF" class="light" colspan="1" width="20%">&nbsp;Condition</TH>
+<TH valign="top" align="left" BGCOLOR="#EEEEFF"  colspan="1" width="20%">&nbsp;Template</TH>
+</TR>
+<TR>
+<TD valign="top" align="left"  colspan="1">&nbsp;None Found</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+<TD valign="top" align="left"  colspan="1">&nbsp;</TD>
+</TR>
+</TABLE>
+<BR>
+<CENTER>
+<P>Copyright 2019 Siemens Product Lifecycle Management Software Inc. All Rights reserved.<BR>
+This documentation is proprietary and confidential to Siemens Product Lifecycle Management Software Inc.<BR>
+</P>
+</CENTER>
+</HTML>
+</HTML>

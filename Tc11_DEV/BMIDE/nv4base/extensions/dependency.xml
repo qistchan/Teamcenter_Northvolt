@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<TcBusinessDataIncludes currentTemplateVersion="11.2_4" displayName="Base Release" enableOpsDataDeploy="true" guid="9E85F6E40675856C779FD3D1D1E57F18" isDescriptionMandatory="false" name="nv4base" optional="true" prefixes="NV4_" teamcenterTemplate="false">
+    <include file="foundation_template.xml"/>
+    <include file="aws2_template.xml"/>
+    <include file="activeworkspacebom_template.xml"/>
+</TcBusinessDataIncludes>
