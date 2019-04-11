@@ -1,6 +1,6 @@
 @rem This script is used to load the TEAMCENTER TC PLM environment after installing the Data model and Dispather( Server/Client) installation.
 @echo off
-
+@rem testing lock
 echo Please make sure you have the correct path for  BASE_DIR , TC_ROOT and TC_DATA. This utility will throw the error if correct path is not set
 set TC_ROOT=D:\Apps\Siemens\Teamcenter11
 set TC_DATA=D:\Apps\Siemens\tcdata
