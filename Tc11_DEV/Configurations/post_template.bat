@@ -1,4 +1,4 @@
-@rem This script is used to load the TEAMCENTER TC PLM environment after installing the Data model and Dispather( Server/Client) installation.
+@rem This script is used to load the teamcenter TEAMCENTER TC PLM environment after installing the Data model and Dispather( Server/Client) installation.
 @echo off
 
 @rem testing for git hub
